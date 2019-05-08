@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kamil Szymanek - NotePocket</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- create/edit note popup -->
+    <div class="create-note__background hide" id="create-note__background">
+        <form class="create-note__window" id="create-note__window">
+            <button type="button" class="create-note__remove" id="create-note__remove"></button>
+            <button type="button" class="create-note__cancel" id="create-note__cancel"></button>
+            <input class="create-note__title" id="create-note__title" type="text" name="title" placeholder="Title...">
+            <textarea class="create-note__content" id="create-note__content" rows="10" name="title" placeholder="Your note..."></textarea>
+            <div class="create-note__input-container">
+                <label for="create-note__pin">Pin</label>
+                <input type="checkbox" name="create-note__pin" id="create-note__pin">
+            </div>
+            <div class="create-note__input-container">
+                <label for="create-note__color">Color</label>
+                <input type="color" name="create-note__color" id="create-note__color">
+            </div>
+            <div class="create-note__input-container">
+                <label for="create-note__notification">Notification date</label>
+                <input type="date" name="create-note__notification" id="create-note__notification">
+            </div>
+            <div class="create-note__input-container">
+                <label for="create-note__tags">Tags</label>
+                <input type="text" name="create-note__tags" class="create-note__tags" id="create-note__tags">
+            </div>
+
+            <button type="button" class="create-note__confirm" id="create-note__confirm">OK</button>
+        </form>
+    </div>
+
+    <header class="header">
+        <h1 class="heading-1">NotePocket</h1>
+        <form class="search__form">
+            <input class="search__input" type="text" name="search" placeholder="Search..">
+        </form>
+    </header>
+
+    <main class="main">
+        <button class="create-note-btn" id="create-note-btn">Create a new note</button>
+
+        <div class="filtered-info hide" id="filtered-info">
+            <span class="filtered-info__text"></span>
+            <button class="filtered-info__remove-btn"></button>
+        </div>
+        <h3 class="heading-3 notes--pinned__title">Pinned</h3>
+        <div class="notes notes--pinned" id="pinned"></div>
+
+        <h3 class="heading-3 notes--others__title">Others</h3>
+        <div class="notes notes--other" id="others"></div>
+    </main>
+
+
+    <script src="js/main.js" type="module"></script>
+</body>
+
+</html>

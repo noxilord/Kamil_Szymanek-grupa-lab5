@@ -1,0 +1,252 @@
+/* check var in styles */
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif; }
+
+body {
+  min-height: 100vh;
+  background-color: #F5F6F6;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr max-content;
+  position: relative; }
+
+.heading-1 {
+  font-size: 3.5rem;
+  line-height: 1;
+  color: #1F1F2E; }
+
+.heading-2 {
+  font-size: 1.8rem;
+  line-height: 1;
+  color: #1F1F2E; }
+
+.heading-3 {
+  font-size: 1.6rem;
+  margin-bottom: .8rem; }
+
+.search__form {
+  display: flex;
+  justify-content: center; }
+
+.search__input {
+  border-radius: 15px;
+  padding: .5rem;
+  width: 90%;
+  transition: all .2s;
+  border: 2px #9CA1A8 solid;
+  outline: none; }
+  .search__input:focus {
+    width: 100%;
+    border: 2px #1F1F2E solid; }
+
+.create-note-btn {
+  border: none;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-weight: 700;
+  border-radius: 300px;
+  background-color: #798494;
+  transition: all .2s;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.8rem;
+  margin-bottom: 4rem;
+  padding: 1.5rem 3.5rem; }
+  .create-note-btn:hover, .create-note-btn:focus {
+    background-color: #1F1F2E;
+    color: #fff; }
+  .create-note-btn:active {
+    transform: scale(1.05);
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.3); }
+
+.create-note__background {
+  position: absolute;
+  background-color: rgba(121, 132, 148, 0.96);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.create-note__window {
+  padding: 3rem;
+  background-color: rgba(245, 246, 246, 0.9);
+  border-radius: 5px;
+  position: fixed;
+  top: 40vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.3);
+  max-width: 200rem;
+  display: flex;
+  flex-direction: column; }
+
+.create-note__remove {
+  position: absolute;
+  top: .6rem;
+  right: 3rem;
+  background: url(../icons/remove.png);
+  background-size: cover;
+  height: 2rem;
+  width: 2rem;
+  border: none;
+  outline: none;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: all .2s;
+  backface-visibility: hidden; }
+  .create-note__remove:hover, .create-note__remove:focus {
+    transform: scale(1.16); }
+
+.create-note__cancel {
+  position: absolute;
+  top: .6rem;
+  right: .6rem;
+  background: url(../icons/cancel.png);
+  background-size: cover;
+  height: 2rem;
+  width: 2rem;
+  border: none;
+  outline: none;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: all .2s;
+  backface-visibility: hidden; }
+  .create-note__cancel:hover, .create-note__cancel:focus {
+    transform: scale(1.16); }
+
+.create-note__title, .create-note__tags {
+  padding: 1rem;
+  border: 1px solid #798494;
+  border-radius: 4px;
+  outline: none; }
+  .create-note__title:active, .create-note__title:focus, .create-note__tags:active, .create-note__tags:focus {
+    border: 1px solid #1F1F2E; }
+
+.create-note__content {
+  margin-top: 1rem;
+  resize: none;
+  padding: 1rem;
+  border: 1px solid #798494;
+  border-radius: 4px;
+  outline: none; }
+  .create-note__content:active, .create-note__content:focus {
+    border: 1px solid #1F1F2E; }
+
+.create-note__input-container {
+  margin: 1rem 0;
+  font-size: 1.6rem; }
+
+.create-note__confirm {
+  border: none;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-weight: 700;
+  border-radius: 300px;
+  background-color: #798494;
+  transition: all .2s;
+  cursor: pointer;
+  outline: none;
+  width: 7rem;
+  padding: .4rem .6rem;
+  margin: auto;
+  margin-top: 3rem; }
+  .create-note__confirm:hover, .create-note__confirm:focus {
+    background-color: #1F1F2E;
+    color: #fff; }
+  .create-note__confirm:active {
+    transform: scale(1.05);
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.3); }
+
+.notes {
+  margin-bottom: 4rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 30rem));
+  grid-gap: 2rem;
+  justify-content: center; }
+  .notes__note {
+    border: 2px transparent solid;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: #fff;
+    transition: all .2s;
+    cursor: pointer; }
+    .notes__note__date {
+      color: #7C7381;
+      font-size: 1.3rem;
+      margin-bottom: 1rem; }
+    .notes__note__content {
+      font-size: 1.6rem;
+      margin-bottom: 2rem; }
+    .notes__note__notification {
+      color: #149bbd;
+      font-size: 1.3rem;
+      font-weight: 700; }
+    .notes__note__tags {
+      color: #1F1F2E;
+      font-size: 1.3rem; }
+    .notes__note:hover {
+      box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.02);
+      border: 2px #798494 solid; }
+
+.header {
+  background-color: #9CA1A8;
+  padding: 2rem;
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.main {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.footer {
+  padding: 2rem;
+  background-color: #1F1F2E;
+  color: #F5F6F6;
+  text-align: center;
+  vertical-align: center;
+  font-size: 1.4rem; }
+
+.filtered-info {
+  padding: 1rem 2rem;
+  background-color: #149bbd;
+  border-radius: 100px;
+  display: flex;
+  margin-bottom: 2.6rem; }
+  .filtered-info__remove-btn {
+    background: url(../icons/cancel.png);
+    background-size: cover;
+    height: 2rem;
+    width: 2rem;
+    border: none;
+    outline: none;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all .2s;
+    backface-visibility: hidden; }
+    .filtered-info__remove-btn:hover, .filtered-info__remove-btn:focus {
+      transform: scale(1.16); }
+  .filtered-info__text {
+    color: white;
+    text-transform: uppercase;
+    margin-right: 2rem;
+    font-size: 1.4rem; }
+
+.hide {
+  display: none; }
