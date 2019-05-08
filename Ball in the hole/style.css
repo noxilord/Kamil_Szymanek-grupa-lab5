@@ -1,0 +1,110 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.ball {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    left: 50%;
+    margin-left: -25px;
+    background: rgb(68, 98, 104);
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 0px 42px -4px rgb(68, 98, 104);
+    -moz-box-shadow: 0px 0px 42px -4px rgb(68, 98, 104);
+    box-shadow: 0px 0px 42px -4px rgb(68, 98, 104);
+}
+
+.ball__obstacle {
+    background: black;
+    -webkit-box-shadow: 0px 0px 42px -4px rgb(68, 98, 104);
+    -moz-box-shadow: 0px 0px 42px -4px rgb(68, 98, 104);
+    box-shadow: 0px 0px 42px -4px rgb(68, 98, 104);
+}
+
+.ball__goal {
+    background: rgb(194, 204, 206);
+    -webkit-box-shadow: 0px 0px 42px -4px rgba(0,255,255,1);
+    -moz-box-shadow: 0px 0px 42px -4px rgba(0,255,255,1);
+    box-shadow: 0px 0px 42px -4px rgba(0,255,255,1);
+}
+
+#board {
+    width: 100vw;
+    height: 100vh;
+    background: darkslategrey;
+}
+
+.screen {
+    position: absolute;
+    z-index: 1000;
+    width: 40vw;
+    height: 50vh;
+    top: 10vh;
+    left: 50%;
+    margin-left: -20vw;
+    background: rgb(92, 127, 134);
+    color: rgb(92, 127, 134);
+    border: 2px solid black;
+    -webkit-box-shadow: 10px 10px 20px -12px rgba(0,255,255,1);
+    -moz-box-shadow: 10px 10px 20px -12px rgba(0,255,255,1);
+    box-shadow: 10px 10px 20px -12px rgba(0,255,255,1);
+    transition: all 0.5s;
+}
+
+.start-screen {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.screen__header {
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.screen__button-container {
+    width: 100%;
+    padding: 0 20%;
+}
+
+.screen__button {
+    width: 100%;
+    padding: 10%;
+    background: magenta;
+    color: whitesmoke;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.screen__footer {
+    font-size: 22px;
+}
+
+.leaderboard__list {
+    overflow: auto;
+}
+
+.leaderboard__close {
+    font-size: 40px;
+    color: cyan;
+    text-align: right;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+}

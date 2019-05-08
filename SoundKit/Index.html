@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <title>Kamil Szymanek - SoundKit</title>
+        <meta charset = "UTF-8">
+        <link rel = "Stylesheet" type = "text/css" href = "css/style.css">
+        <link rel="Stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src = "JavaScript/Main.js"></script>
+    </head>
+    <body>
+        <div id = "container">
+            <div id = "notesContainer"></div>
+            <div id = "infoBox">
+                <i class="material-icons notextSelect">info_outline</i>
+            </div>
+            <div id = "settingsBox">
+                <div id = "settingsBody">
+                    <input id = "settingsVolume" type = "range" orient = "vertical" min = "0" max = "1" step="0.01" value = "0.1">
+                </div>
+                <div id = "settingsIcon">
+                    <i class="material-icons notextSelect">settings</i>
+                </div>
+            </div>
+            <div id = "tracksBox">
+                <div id = "tracksBody">
+                    <div id = "tracksBodyInner">
+                        <div id = "tracksSettings">
+                            <i id="playButton" class = "material-icons notextSelect">play_circle_outline</i>
+                            <i id="recordButton" class = "material-icons notextSelect">fiber_manual_record</i>
+                            <i id="clearButton" class = "material-icons notextSelect">clear</i>
+                        </div>
+                        <div id = "tracksList">
+                            <div id = "tracks0" class = "track"><div id="tracks0Content" class="tracksContent"></div></div><i class="material-icons trackSelect notextSelect" id="trackSelect0" style="font-size: 55px;" >check</i>
+                            <div id = "tracks1" class = "track"><div id="tracks1Content" class="tracksContent"></div></div><i class="material-icons trackSelect notextSelect" id="trackSelect1" style="font-size: 55px;" ></i>
+                            <div id = "tracks2" class = "track"><div id="tracks2Content" class="tracksContent"></div></div><i class="material-icons trackSelect notextSelect" id="trackSelect2" style="font-size: 55px;" ></i>
+                            <div id = "tracks3" class = "track"><div id="tracks3Content" class="tracksContent"></div></div><i class="material-icons trackSelect notextSelect" id="trackSelect3" style="font-size: 55px;" ></i>
+                        </div>
+                    </div>
+                </div>
+                <div id = "tracksOpen">
+                    <i id = "tracksOpenIcon" class="material-icons notextSelect">keyboard_arrow_down</i>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

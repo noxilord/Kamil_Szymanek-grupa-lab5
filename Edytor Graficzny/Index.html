@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Photo Editor</title>
+      <link href="https://fonts.googleapis.com/css?family=Anton&amp;subset=latin-ext" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+      <header class="header">
+            <h1 class="logo">photo editor</h1>
+            <div class="input__container hide" id="input__container">
+                  <label><span class="add__padding">brightness</span>
+                        <input id="brightness" type="range" min="-200" max="200">
+                  </label>
+                  <label><span class="add__padding">contrast</span>
+                        <input id="contrast" type="range" min="-150" max="150">
+                  </label>
+                  <label><span class="add__padding">saturation</span>
+                        <input id="saturation" type="range" min="-150" max="150">
+                  </label>
+                  <label><span class="add__padding">hue red</span>
+                        <input id="hue__red" type="range" min="-50" max="50">
+                  </label>
+                  <label><span class="add__padding">hue green</span>
+                        <input id="hue__green" type="range" min="-50" max="50">
+                  </label>
+                  <label><span class="add__padding">hue blue</span>
+                        <input id="hue__blue" type="range" min="-50" max="50">
+                  </label>
+                  <label>sharpness
+                        <input id="sharpness" type="range" min="0" max="100">
+                  </label>
+                  <div class="btn__container">
+                        <button id="blur" class="btn">blur</button>
+                        <button id="sepia__btn" class="btn">Sepia</button>
+                  </div>
+                  <label>pen size
+                        <input id="pen__size" type="range" min="1" max="70">
+                  </label>
+                  <label>pen color
+                        <input id="pen__color" class="pen__color" type="color">
+                  </label>
+                  <div class="pen__shape">
+                        <label>round
+                              <input id="round" type="radio" name="pen__shape" checked="checked">
+                        </label>
+                        <label>square
+                              <input id="square" type="radio" name="pen__shape">
+                        </label>
+                  </div>
+                  <button class="download__btn btn">
+                        <a id="download">download photo</a>
+                  </button>
+            </div>
+      </header>
+      <main>
+            <div class="add__file__container">
+                  <input type="file" name="file" id="file" class="inputfile">
+                  <label class="file__label" for="file">Choose a photo</label>
+            </div>
+                  <canvas id="cvs" class="hide"></canvas>
+      </main>
+      <script src="EdytorMain.js"></script>
+</body>
+
+</html>

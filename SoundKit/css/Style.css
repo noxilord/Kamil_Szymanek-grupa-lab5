@@ -1,0 +1,252 @@
+html
+{
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+}
+body
+{
+	margin: 0;
+	padding: 0;
+	width:100%;
+	height:100%;
+}
+#container
+{
+	width:100%;
+	height:100%;
+	background-color: #27292e;
+	overflow-y: hidden;
+	overflow-x: auto;
+}
+#notesContainer
+{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+#infoBox
+{
+	cursor: pointer;
+	background-color:#35363b;
+	position: fixed;
+	top:100px;
+	right: 0px;
+	z-index: 100;
+	border-radius: 3px 0px 0px 3px;
+	box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 4px 0 rgba(0, 0, 0, 0.24);
+}
+#infoBox > i
+{
+	width:58px;
+	height:58px;
+	line-height: 58px;
+	font-size:35px;
+	color: #efefef;
+	text-align: center;
+}
+#settingsBox
+{
+	background-color:#35363b;
+	position: fixed;
+	top:100px;
+	left:-100px;
+	z-index: 100;
+	transition: left 0.3s ease-in-out;
+}
+#settingsBody
+{
+	padding-top: 20px;
+	width:100px;
+	height:200px;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+	z-index: 100;
+}
+#settingsVolume 
+{
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	width: 50px;
+	height: 150px;
+	-webkit-appearance : slider-vertical;
+	writing-mode: bt-lr;
+}
+#settingsIcon
+{
+	cursor: pointer;
+	position: absolute;
+	width: 58px;
+	height: 58px;
+	top: 0px;
+	left: 100px;
+	background-color:#35363b;
+	border-radius: 0px 3px 3px 0px;
+	box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 4px 0 rgba(0, 0, 0, 0.24);
+
+}
+#settingsIcon > i
+{
+    margin:0px;
+    padding:0px;
+    font-size:25px;
+    line-height:58px;
+    width:58px;
+    text-align:center;
+    color: white;
+}
+#settingsIcon:before
+{
+	background-color:#35363b;
+	display: block;
+	content: ".";
+	font-size: 0;
+	width: 10px;
+	height: 58px;
+	position: absolute;
+	top: 0px;
+	left: -5px;
+}
+#tracksBox
+{
+	width:100%;
+	height:300px;
+	background-color:#35363b;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 4px 0 rgba(0, 0, 0, 0.24);
+	z-index: 99;
+	transition: bottom 0.45s ease-in-out;
+}
+#tracksOpen
+{
+	cursor: pointer;
+	width: 58px;
+	height: 58px;
+	position: absolute;
+	bottom: 300px;
+	left: 100px;
+	background-color:#35363b;
+	border-radius: 3px 3px 0px 0px;
+	box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 4px 0 rgba(0, 0, 0, 0.24);
+}
+#tracksOpen:before
+{
+	background-color: #35363b;
+	display: block;
+	content: ".";
+	font-size: 0;
+	width: 58px;
+	height: 10px;
+	position: absolute;
+	top: 53px;
+}
+#tracksOpen > i 
+{
+	margin:0px;
+    padding:0px;
+    font-size:45px;
+    line-height:58px;
+    width:58px;
+    text-align:center;
+    color: white
+}
+#tracksBody
+{
+	height:100%;
+}
+#tracksBodyInner
+{
+	margin: 0 auto;
+	width: 1100px;
+	height: 100%;
+}
+#tracksSettings
+{
+	margin-top: 30px;
+	float:left;
+	width: 100px;
+	height: 100%;
+}
+#tracksSettings > i
+{
+	cursor: pointer;
+	width:100%;
+	height:83px;
+	text-align: center;
+	font-size:40px;
+	line-height:83px;
+	color: #efefef;
+}
+#tracksList
+{
+	margin: 0;
+	padding: 20px 10px;
+	float:left;
+	width:980px;
+	height:100%;
+}
+.trackNote
+{
+	display: block;
+	float:left;
+	width:39px;
+	height:39px;
+	font-size: 39px;
+	line-height: 39px;
+	text-align: center;
+	border-right: 1px solid grey;
+}
+.trackSelect
+{
+	cursor: pointer;
+	float:left;
+	box-sizing: border-box;
+	border-left: 1px solid grey;
+	margin: 10px 0 0 0;
+	padding: 0;
+	width:55px;
+	height:55px;
+	line-height:55px;
+	background-color: #efefef;
+	color: #35363b;
+}
+.tracksContent
+{
+	width: auto;
+	display: table;
+	height: 55px;
+	max-height: 55px;
+	overflow-y: hidden;
+}
+.track /* check track */
+{
+	float:left;
+	width: 925px;
+	max-width:925px;
+	margin-top: 10px;
+	background-color: #efefef;
+	height: 55px;
+	max-height: 55px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+.note 
+{
+	width:150px;
+	height:150px;
+	position: fixed;
+	z-index: 1;
+	font-size: 200px;
+	line-height: 150px;
+	text-align: center;
+}
+.notextSelect
+{
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;  
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; 
+}

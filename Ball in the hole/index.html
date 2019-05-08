@@ -1,0 +1,28 @@
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Kamil Szymanek Ball in a hole</title>
+    <link href="https://fonts.googleapis.com/css?family=Yesteryear" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="board">
+    </div>
+    <div class="start-screen screen">
+      <div class="screen__button-container">
+        <button class="screen__button" onclick="startGame()">New Game</button>
+        <button class="screen__button" onclick="showLeaderBoards()">Board</button>
+      </div>
+    </div>
+    <div class="overlay">
+    </div>
+    <div class="leaderboard screen">
+        <div class="leaderboard__close" onclick="closeLeaderBoards()">x</div>
+        <h2 class="screen__header">Board</h2>
+        <div class="leaderboard__list">
+        </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
